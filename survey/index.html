@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Precisax Survey</title>
+</head>
+
+<body>
+
+
+    <header id="header">
+        <h1 id="title">Encuesta de satisfacción de <span id="brand-in-title">Precisax</span></h1>
+        <p id="description">Queremos seguir mejorando la primera app del tiempo que acierta al 100% , ¿nos ayudas?</p>
+    </header>
+
+
+    <form id="survey-form">
+
+        <div class="form-group">
+            <label id="name-label" for="name">Nombre</label>
+            <input class="form-control" type="text" name="name" id="name" required placeholder="Introduce tu nombre">
+        </div>
+
+        <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input class="form-control" type="email" name="email" id="email" required
+                placeholder="Introduce un email que realmente uses :)">
+        </div>
+
+        <div class="form-group">
+            <label id="number-label" for="number">Edad</label>
+            <input class="form-control" type="number" name="age" id="number" min="18" max="100" placeholder="Tu edad">
+        </div>
+
+
+        <label id="dropdown-label" for="dropdown">¿Con que frecuencia consultas el tiempo?</label>
+        <select class="form-control" name="frequency" id="dropdown">
+            <option value=""></option>
+            <option value="">Una vez al día</option>
+            <option value="">Varias veces al día</option>
+            <option value="">Una vez por semana</option>
+            <option value="">Varias veces en la semana</option>
+            <option value="">Casi nunca</option>
+        </select>
+
+
+
+        <p id="weather-type">¿Qué tipo de clima predomina en tu zona?</p>
+        <div id="form-group-radio">
+            <label for="atlantico">Atlántico
+                <input class="input-radio" type="radio" name="weather" value="atlantico" id="atlantico">
+            </label>
+            <label for="mediterraneo">Mediterráneo
+                <input class="input-radio" type="radio" name="weather" value="meditaerraneo" id="meditaerraneo">
+            </label>
+            <label for="arido-semiarido">Árido
+                <input class="input-radio" type="radio" name="weather" value="arido" id="arido">
+            </label>
+            <label for="subtropical">Subtropical
+                <input class="input-radio" type="radio" name="weather" value="subtropical" id="subtropical">
+            </label>
+            <label for="montaña">Montaña
+                <input class="input-radio" type="radio" name="weather" value="montaña" id="montaña">
+            </label>
+        </div>
+
+
+
+        <div class="form-group">
+            <p id="form-group-checkbox-header">¿Que es lo que más te gusta de Precisax? <br>(puedes elegir varias
+                opciones)</p>
+            <label for="">
+                <input class="input-checkbox" type="checkbox" name="" id="" value="1">Previsión de la temperatura
+            </label>
+            <label for="">
+                <input class="input-checkbox" type="checkbox" name="" id="" value="2">Previsión de la humedad
+            </label>
+            <label for="">
+                <input class="input-checkbox" type="checkbox" name="" id="" value="3">Precisión optimizada en tiempo
+                real
+            </label>
+            <label for="">
+                <input class="input-checkbox" type="checkbox" name="" id="" value="4">Precisión a 15 días vista
+            </label>
+            <label for="">
+                <input class="input-checkbox" type="checkbox" name="" id="" value="5">Frecuencia contínua de
+                actualización en tiempo y espacio
+            </label>
+            <label for="">
+                <input class="input-checkbox" type="checkbox" name="" id="" value="6">Alerta en tiempo real de eventos
+                climatológicos
+            </label>
+            <label for="">
+                <input class="input-checkbox" type="checkbox" name="" id="" value="7">Nueva interfaz de usuario
+            </label>
+            <label for="">
+                <input class="input-checkbox" type="checkbox" name="" id="" value="8">Facilidad de uso
+            </label>
+        </div>
+
+
+        <div class="form-group">
+            <p id="comments-header">Déjanos tus sugerencias ...</p>
+            <textarea id="comments-textarea" name="comments" cols="45" rows="5" placeholder="Sugiero ..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <button class="submit-button" type="submit" id="submit">Enviar</button>
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>
