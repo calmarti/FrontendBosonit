@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Documentation</title>
+</head>
+
+
+<body>
+    <nav id="navbar">
+        <header id="navbar-header">
+            <h3>Documentation</h3>
+        </header>
+        <ul id="index">
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#getting_started">Getting Started</a></li>
+            <li><a class="nav-link" href="#hello_world">Hello World</a></li>
+            <li><a class="nav-link" href="#data_types">Data types</a></li>
+            <li><a class="nav-link" href="#variables">Variables</a></li>
+            <li><a class="nav-link" href="#functions">Functions</a></li>
+            <li><a class="nav-link" href="#references">References</a></li>
+        </ul>
+    </nav>
+
+
+    <main id="main-doc">
+        <h1>All about Rust</h1>
+        <span><em>Brief documentation for hurried programmers</em></span>
+
+        <section class="main-section" id="introduction">
+            <header>
+             <h2>Introduction</h2> 
+            </header>
+            <p>Rust is a multi-paradigm, statically-typed, general-purpose programming language that was design with a
+                focus on safety and performance by Software developer Graydon Hoare while working at Mozilla Research in
+                2006.
+                Rust has recently become popular for systems programming and is expected to be the merged into the
+                Linux's kernel
+                by 2023. One of the great features of Rust is that challenges the idea that high-level ergonomics
+                and low-level control are not possible to reconcile in programming language design.
+            <p>In recent years Rust's popularity has grown among developers according to Stackoverflow. Apart from
+                systems' programming, it has a variety of use cases which include game development, web development,
+                data science, and virtual reality.
+            </p>
+            </p>
+        </section>
+
+        <section class="main-section" id="getting_started">
+            <header>
+               <h2>Getting started</h2> 
+            </header>
+            <article>
+                <p>In order to get going with Rust you have to download it through <a
+                        href="https://www.rust-lang.org/tools/install">
+                        rustup</a>, a command line tool for managing Rust versions and associated tools. </p>
+                <h3>Intalling rustup on Linux or macOS</h3>
+                <p>Open a terminal and enter the following command:</p>
+
+                <code>$ curl --proto '= https' --tlsv1.3 https://sh.rustup.rs -sSf | sh</code>
+                <p>The command downloads a script and starts the installation of the rustup tool, which installs the
+                    latest stable version of Rust. You might be prompted for your password.</p>
+                <p>Once the installation is succesful, you will also need a linker, which is a program that Rust uses to
+                    join its compiled outputs into one file. It is likely you already have one. If you get linker
+                    errors, you should install a C compiler, which will typically include a linker. A C compiler is also
+                    useful because some common Rust packages depend on C code and will need a C compiler.</p>
+                <p>Linux users should generally install GCC or Clang, according to their distribution’s documentation.
+                    For example, if you use Ubuntu, you can install the build-essential package.</p>
+                <h3>Installing rustup on Windows</h3>
+                <p>On Windows, go <a href="https://www.rust-lang.org/tools/install">here</a> and follow the instructions
+                    for installing Rust. At some point in the installation, you’ll receive a message explaining that
+                    you’ll also need the MSVC build tools for Visual Studio 2013 or later. To acquire the build tools,
+                    you’ll need to install Visual Studio 2022. When asked which workloads to install, include:</p>
+                <ul>
+                    <li>“Desktop Development with C++”</li>
+                    <li>The Windows 10 or 11 SDK</li>
+                    <li> The English language pack component, along with any other language pack of your choosing</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="hello_world">
+            <header>
+                <h2>Hello World</h2>
+             
+            </header>
+            <article>
+                <p>Now that you’ve installed Rust, let’s write your first Rust program. It’s traditional when learning a
+                    new language to write a little program that prints the text Hello, world!.</p>
+
+                <p>Create a new source file and call it main.rs. Rust files always end with the .rs extension. If you’re
+                    using more than one word in your filename, the convention is to use an underscore to separate them.
+                    For example, use hello_world.rs rather than helloworld.rs.
+                    Now open the main.rs file you just created and enter the code:</p>
+                <code>
+              fn main() {println!("Hello, World!");
+            }</code>
+                <p>And voilà, the println! macro prints the message to standard output</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="data_types">
+            <header>
+                <h2>Data types</h2>
+             
+            </header>
+                <article>
+                    <p>Rust is a statically typed language. Every value in Rust is of a certain data type. The compiler
+                        can automatically infer data type of the variable based on the value assigned to it.
+                        Built-in types are tightly integrated into the language, in nontrivial ways that are not
+                        possible to emulate in user-defined types. User-defined types have limited capabilities.
+                    <p>The list of types is as follows:</p>
+
+                    <h4>Primitive types</h4>
+                    <ul>
+                        <li>Boolean</li>
+                        <li>Numeric</li>
+                        <li>Textual</li>
+                        <li>Never</li>
+                    </ul>
+                    <h4>Sequence types</h4>
+                    <ul>
+                        <li>Tuple</li>
+                        <li>Array</li>
+                        <li>Slice</li>
+
+                    </ul>
+                    <h4>Function types</h4>
+                    <ul>
+                        <li>Functions</li>
+                        <li>Closures</li>
+                    </ul>
+
+                    <h4>Pointer types</h4>
+                    <ul>
+                        <li>References</li>
+                        <li>Raw pointers</li>
+                        <li>Function pointers</li>
+                    </ul>
+
+
+                    </p>
+                </article>
+        </section>
+
+        <section class="main-section" id="variables">
+            <header>
+                <h2> Variables</h2>
+               
+            </header>
+            <article>
+                <p>In Rust variables are immutable. This is one of many nudges Rust gives you to write your code in a
+                    way that takes advantage of the safety and easy concurrency that Rust offers. However, you still
+                    have the option to make your variables mutable.</p>
+                <p>When a variable is immutable, once a value is bound to a name, you can’t change that value. To
+                    illustrate this, open src/main.rs and replace its code with the following code. This code won’t
+                    compile just yet, we’ll first examine the immutability error.</p>
+                <p>Filename: src/main.rs</p>
+                <code>fn main() {
+                let x = 5;
+                println!("The value of x is: {x}");
+                x = 6;
+                println!("The value of x is: {x}");
+            }</code>
+                <p>Save and run the program using cargo run. You should receive an error message, as shown in this
+                    output:</p>
+                <code>$ cargo run Compiling variables v0.1.0 (file:///projects/variables)
+             error[E0384]: cannot assign twice to immutable variable `x`
+              --> src/main.rs:4:5</code>
+                <p>This example shows how the compiler helps you find errors in your programs. Compiler errors can be
+                    frustrating, but really they only mean your program isn’t safely doing what you want it to do yet;
+                    they do not mean that you’re not a good programmer! Experienced Rustaceans still get compiler
+                    errors.
+                    The error message indicates that the cause of the error is that you cannot assign twice to immutable
+                    variable `x`, because you tried to assign a second value to the immutable x variable.</p>
+                </article>
+            </section>
+            
+            <section class="main-section" id="functions">
+                <header>
+                    <h2> Functions</h2>
+                   
+                </header>
+                <article>
+                    <p>Functions are prevalent in Rust. Rust code uses snake case as the conventional style for function
+                        and variable names, in which all letters are lowercase and underscores separate words. Here’s a
+                        program that contains an example function definition:
+
+                        <br>
+                        <br>
+                        Filename: src/main.rs
+                    </p>
+                    <code>
+
+                    fn main() {  <br>
+                        println!("Hello, world!"); <br>
+                        
+                        another_function(); <br>
+                    }  <br>
+                    <br>
+
+                    fn another_function() { <br>
+                        println!("Another function."); <br>
+                    }                  
+                </code>
+                    We define a function in Rust by entering fn followed by a function name and a set of parentheses.
+                    The curly brackets tell the compiler where the function body begins and ends.
+
+                    We can call any function we’ve defined by entering its name followed by a set of parentheses.
+                    Because <em>another_function</em> is defined in the program, it can be called from inside the
+                    <em>main</em> function. Note that we defined <em>another_function</em> after the <em>main</em>
+                    function in the source code; we could have defined it before as well. Rust doesn’t care where you
+                    define your functions, only that they’re defined somewhere in a scope that can be seen by the
+                    caller.
+                </article>
+                
+            </section>
+            <section class="main-section" id="references">
+                <header>
+                    <h2>References</h2>
+                </header>
+                <article id="references-container">
+                    <a href="https://www.rust-lang.org/learn">Official Rust documentation</a>
+                    <a href="https://doc.rust-lang.org/book/">The Rust programming language (online book)</a>
+                    <a href="https://www.amazon.com/Complete-Rust-Programming-Reference-Guide/dp/1838828109">The
+                        Complete Rust Programming Reference Guide</a>
+                    <a href="https://code.visualstudio.com/docs/languages/rust">Rust with Visual Studio Code</a>
+                    <a href="https://www.freecodecamp.org/espanol/news/rust-en-replit/">Tutorial interactivo de Rust
+                        (Spanish)</a>
+                </article>
+        </section>
+
+    </main>
+</body>
+
+</html>
+
