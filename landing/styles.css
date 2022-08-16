@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
+
+:root {
+    --dark-color: #62764A;
+    --light-color: #F9FAF2;
+    --shade-color: #E7E8DB;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-family: "Oldenburg", Arial, sans-serif;
+    font-size: 2vh;
+    overflow-x: hidden;
+}
+
+/* sección #header */
+
+#header {
+    background-color: var(--shade-color);
+    font-weight: 800;
+    width: 100vw;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#header-img {
+    position: relative;
+    right: 50rem;
+    display: none;
+}
+
+#brand-name {
+    font-size: 2rem;
+    font-variant: small-caps;
+    letter-spacing: 0.5rem;
+    text-decoration: none;
+    color: var(--dark-color);
+    display: block;
+    position: relative;
+    right: 38rem;
+}
+
+
+/* subsección #nav-bar*/
+
+#nav-bar {
+    display: block;
+    width: 100vw;
+    position: fixed;
+
+}
+
+#nav-bar>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10rem;
+    list-style-type: none;
+}
+
+.nav-link,
+a.nav-link:visited,
+a.nav-link:hover,
+a.nav-link:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/*sección #call-to-action */
+
+#call-to-action {
+    padding: 2rem;
+    margin: 8rem 0 7rem 0;
+    width: 30vw;
+    position: relative;
+    left: 32vw;
+    background-color: var(--shade-color);
+    box-shadow: 0.12rem 0.19rem 0.3rem var(--dark-color);
+
+}
+
+#call-to-action-title {
+    margin-top: 0rem;
+    text-align: start;
+    font-variant: small-caps;
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+#call-to-action-subtitle {
+    text-align: start;
+    margin-left: 0.1rem;
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 100;
+
+}
+
+#form {
+    width: 100%;
+    text-align: center;
+
+}
+
+#email {
+    width: 22vw;
+    height: 2.3rem;
+    margin-top: 1.3rem;
+    border-radius: 0.2rem;
+    margin-right: 1rem;
+    background-color: var(--light-color);
+    border: 0.1rem solid transparent;
+    outline: none;
+}
+
+#submit {
+    display: inline-block;
+    width: 8rem;
+    height: 2.5rem;
+    margin-left: -0.8rem;
+    margin-top: 0.95rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+#submit:hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border: 0.1rem solid var(--dark-color);
+}
+
+
+
+/* sección features*/
+
+#features-section {
+    width: 100vw;
+}
+
+#features-section-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4rem;
+}
+
+.features-card {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.features-icon {
+    max-width: 100%;
+    height: auto;
+    margin-left: 7vw;
+    flex-basis: 10vw;
+}
+
+.features-card-content {
+    font-size: 1.1rem;
+    margin-left: 3rem;
+
+}
+
+
+
+/* sección #demo-section ("exhibiciones")*/
+
+#demo-section {
+    display: block;
+    margin: 0 auto;
+    width: 50vw;
+    text-align: start;
+    margin-top: 15rem;
+}
+
+#demo-section>h2 {
+    font-size: 1.8rem;
+}
+
+
+#video {
+    width: 50vw;
+    display: block;
+    padding-top: 2rem;
+    display: block;
+
+}
+
+
+/* sección cards-section ("subastas") */
+
+#cards-section {
+    margin-top: 16rem;
+    margin-bottom: 14rem;
+
+}
+
+
+#cards-section>h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: -5rem;
+
+}
+
+#cards-flex-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+}
+
+
+/*nodo #card y sus children*/
+
+.card {
+    width: 25%;
+    margin-top: 10rem;
+}
+
+.card-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-button {
+    width: 7rem;
+    height: 2.6rem;
+    margin: 0 auto;
+    margin-top: 0.95rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+
+}
+
+.card-button:hover {
+    background-color: #F9FAF2;
+    color: var(--dark-color);
+    border: 0.1rem solid --var(--dark-color);
+
+}
+
+
+
+/*footer*/
+
+#footer {
+    margin-top: 7rem;
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--shade-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+
+
+
+
+/* estilos responsive*/
+
+
+@media screen and (max-width: 1024px) {
+
+    html,
+    body {
+        font-size: 1.3vh;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
+        font-size: 1.25vh;
+    }
+
+    #header {
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+
+    #header-img {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    #brand-name {
+        position: relative;
+        top: 0;
+        left: 0rem;
+        text-align: center;
+
+    }
+
+
+    #nav-bar {
+        display: block;
+        width: 100vw;
+        position: initial;
+
+    }
+
+    #nav-bar>ul {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        list-style-type: none;
+        padding-bottom: 1rem;
+        padding-left: 0;
+
+    }
+
+    #call-to-action {
+        padding: 2rem;
+        margin: 28rem 0 7rem 0;
+        width: 50vw;
+        position: relative;
+        left: 20vw;
+    }
+
+    #video {
+        width: 80vw;
+        height: auto;
+        display: block;
+        max-width: 100%;
+    }
+}
