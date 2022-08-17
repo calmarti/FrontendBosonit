@@ -9,7 +9,7 @@ html, body{
     font-size: 2.7vh; 
     text-align: center;
     box-sizing: border-box;
-    background-image: url("./fair_weather.jpg");
+    background-image: url("./images/fair_weather.jpg");
     background-size: cover;
     background-repeat: no-repeat; 
     background-attachment: fixed;
