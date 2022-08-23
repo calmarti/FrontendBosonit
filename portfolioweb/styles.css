@@ -29,7 +29,6 @@ body {
 /*sección navbar*/
 
 #navbar {
-
   position: fixed;
   top: 0;
   left: 0;
@@ -64,13 +63,12 @@ a:active {
 /*sección welcome*/
 
 #welcome-section {
-
-  height: 100vh-var(--navbar-height);
-  background-color: var(--bg-dark);
-  color: var(--bg-light);
   position: relative;
   top: 12rem;
   left: 0rem;
+  height: calc(50vh - var(--navbar-height));
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
   padding-left: 2rem;
 
 }
@@ -92,25 +90,22 @@ a:active {
 }
 
 #welcome-subtitle {
-  font-size: 2.1rem;
-  font-weight: 100;
-  display: inline-block;
   position: relative;
   bottom: 2.4rem;
   left: -20rem;
+  font-size: 2.1rem;
+  font-weight: 100;
+  display: inline-block;
   animation: movingSubtitle 2.5s 1.5s forwards ease;
 
 }
 
 @keyframes movingSubtitle {
   from {
-
-    /* bottom:2.4rem; */
     left: -10rem;
   }
 
   to {
-    /* bottom:2.4rem; */
     left: 0.5rem;
   }
 }
@@ -121,7 +116,8 @@ a:active {
 
 #about {
   background-color: var(--accent-color-2);
-  margin-top: 28rem;
+  position: relative;
+  top: 25rem;
   width: 100vw;
   height: 80vh;
   font-weight: 400;
@@ -131,21 +127,21 @@ a:active {
 
 #about-header {
   position: relative;
-  top: 9rem;
+  top: 8rem;
   left: 4rem;
-  text-align: justify;
   width: 100vw;
+  text-align: justify;
   font-size: 3.8rem;
   font-weight: 700;
 }
 
 #about-content {
   position: relative;
-  top: 10rem;
+  top: 8rem;
   left: 4rem;
+  width: 100vw;
   font-size: 2.6rem;
   font-weight: 400;
-  width: 100vw;
 
 }
 
@@ -154,15 +150,17 @@ a:active {
 /*sección projects*/
 
 #projects {
+  position: relative;
+  top: 30rem;
   width: 100vw;
-  height: 165vh;
   background-color: var(--bg-dark);
-  margin-bottom: 10rem;
   margin-top: 8rem;
+  margin-bottom: 35rem;
 
 }
 
 #projects-header {
+  font-size: 1.7rem;
   text-align: center;
   color: var(--bg-light);
   margin: 4rem 0;
@@ -181,9 +179,9 @@ a:active {
 /*nodo project-tile y sus children*/
 
 .project-tile {
+  width: 31vw;
   height: 72vh;
   text-align: center;
-  width: 31vw;
 }
 
 .project-img {
@@ -208,13 +206,16 @@ a:active {
 /*sección contact*/
 
 #contact {
-  width: 100vw;
   background-color: var(--accent-color-1);
-  height: 70vh;
+  position: relative;
+  top: 5rem;
+  width: 100vw;
+  height: 50vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   text-align: center;
+  padding: 5rem 0;
 
 }
 
@@ -244,8 +245,9 @@ a:active {
 /* sección footer*/
 
 #footer {
-  height: 10vh;
+  margin-top: 8rem;
   width: 100vw;
+  height: 10vh;
   color: var(--bg-light);
   text-align: center;
   font-weight: 100;
@@ -279,7 +281,7 @@ a:active {
     top: 4rem;
     left: -5rem;
     width: 100vw;
-    font-size: 2rem;
+    font-size: 2.2rem;
     padding-top: 2rem;
   }
 
@@ -293,10 +295,13 @@ a:active {
   }
 
   #projects {
+    position: relative;
+    top: 30rem;
     width: 100vw;
-    height: 160vh;
     margin-bottom: 38rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
+    background-color: var(--bg-dark);
+
   }
 
   #projects-flex-container {
@@ -306,14 +311,14 @@ a:active {
   }
 
   .project-tile {
-    height: 50vh;
     width: 40vw;
+    height: 50vh;
   }
 
   #contact {
     width: 100vw;
     background-color: var(--accent-color-1);
-    height: 70vh;
+    height: 50vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -323,7 +328,7 @@ a:active {
 
   #contact-header {
     width: 100vw;
-    font-size: 2.3rem;
+    font-size: 2.1rem;
 
   }
 
@@ -360,10 +365,10 @@ a:active {
 
 
   #welcome-section {
-    height: 28vh;
     position: relative;
     top: 15rem;
     left: 1rem;
+    height: 28vh;
   }
 
   #welcome-title {
@@ -373,12 +378,12 @@ a:active {
   }
 
   #welcome-subtitle {
-    font-size: 2.1rem;
-    font-weight: 100;
-    display: inline-block;
     position: relative;
     bottom: 0rem;
     left: -20rem;
+    display: inline-block;
+    font-size: 2.1rem;
+    font-weight: 100;
     font-size: 1.7rem;
 
   }
@@ -403,10 +408,9 @@ a:active {
     position: relative;
     top: 1rem;
     left: -6rem;
-    font-size: 1.3rem;
-    width: 100vw;
-    margin-top: 5rem;
     width: 90vw;
+    font-size: 1.3rem;
+    margin-top: 5rem;
   }
 
   #projects-flex-container {
@@ -414,29 +418,40 @@ a:active {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 6rem;
 
   }
 
   #projects {
-    height: 180vh;
+    margin-bottom: 6rem;
+  }
+
+  #projects-header {
+    font-size: 1.3rem;
   }
 
   .project-tile {
-    height: 50vh;
     width: 85vw;
+    height: 50vh;
   }
 
   #contact {
+    position: relative;
+    top: 30rem;
     width: 100vw;
-    height: 50vh;
+    height: 30vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     text-align: center;
-
   }
 
+  #contact-items-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
 
   #contact-header {
     width: 90vw;
@@ -445,14 +460,9 @@ a:active {
 
   }
 
-  #contact-items-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-
-
+  #footer {
+    position: relative;
+    top: 25rem;
   }
-
 
 }
