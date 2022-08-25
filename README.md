@@ -1,10 +1,12 @@
 # Itinerario Formación Frontend Bosonit
-- HTML5 & CSS3
-### Proyectos de diseño responsive
+
+### HTML5 & CSS·
 
     - Tribute page
     - Survey form
-    - Technical Documentation 
+    - Technical Documentation page
     - Landing page
     - Porfolio web
-
+---
+### Language fundamentals and best practices
+    - Javascript Exercises
