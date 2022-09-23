@@ -1,0 +1,24 @@
+button {
+    margin: 0.75rem;
+    
+}
+
+.child-container {
+    border:solid 2px blue;
+    margin: 0 0.2rem 0.2rem 0.2rem;
+}
+
+.child-title{
+    margin: 0.5rem;
+}
+
+.child-message {
+    font-size:1rem;
+    font-weight:500;
+    text-align: center;
+}
+
+.buttons-container {
+   display: flex;
+   justify-content: center;
+}
