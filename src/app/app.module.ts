@@ -5,6 +5,7 @@ import { MaterialModule } from './material/material.module';
 import { AppComponent } from './app.component';
 import { ParentComponent } from './parent/parent/parent.component';
 import { ChildComponent } from './child/child/child.component';
+import { MessageService } from './service/message.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { ChildComponent } from './child/child/child.component';
     BrowserModule, 
     MaterialModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

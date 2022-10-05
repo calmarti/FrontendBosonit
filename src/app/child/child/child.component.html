@@ -1,9 +1,28 @@
 <div class="child-container">
     <h2 class="child-title">Child</h2>
-    <p class="child-message">Message:</p>
+
+    <p *ngIf="messageThroughInput" class="child-text">Message:{{ messageThroughInput}}</p>
+    
+    <p *ngIf="messageThroughService" class="child-text">Message:{{ messageThroughService }}</p>
+
+    <p *ngIf="messageThroughObservable" class="child-text">Message:{{ messageThroughObservable }}</p>
+
     <div class="buttons-container">
-      <button mat-raised-button color="basic">Use Service</button>
-      <button mat-raised-button color="basic">Use Output Event</button>
-      <button mat-raised-button color="basic">Use Observable</button>
+      <button mat-raised-button color="basic"
+      (click)="useService()"  
+      >
+      Use Service
+      </button>
+      
+      <button mat-raised-button color="basic"
+      (click)="useOutput()"
+      >Use Output Event
+      </button>
+      
+      <button mat-raised-button color="basic"
+      (click)="useObservable()"
+      >Use Observable
+      </button>
+
     </div> 
   </div>

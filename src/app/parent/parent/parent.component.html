@@ -1,10 +1,35 @@
 <div class="parent-container">
     <h2 class="parent-title">Parent</h2>
-    <p class="parent-message">Message:</p>
+    <p *ngIf="messageThroughOutput" class="parent-text"> Message: {{ messageThroughOutput }} </p>
+    <p *ngIf="messageThroughService" class="parent-text"> Message: {{ messageThroughService }} </p>
+    <p *ngIf="messageThroughObservable" class="parent-text"> Message: {{ messageThroughObservable }} </p>
+
     <div class="buttons-container">
-        <button mat-raised-button color="basic">Use Service</button>
-        <button mat-raised-button color="basic">Use Input Property</button>
-        <button mat-raised-button color="basic">Use Observable</button>
+     
+        <button 
+        mat-raised-button color="basic" 
+        (click)="useService()"
+        >Use Service
+        </button>
+
+        <button 
+        mat-raised-button 
+        color="basic" 
+        (click)="useInput()"
+        >Use Input Property
+        </button>
+        
+        <button mat-raised-button color="basic"
+        (click)="useObservable()"
+        >Use Observable
+        </button>
+        
     </div>
-    <app-child></app-child>
+    <app-child 
+    [messageThroughInput]="message"
+    [subjectFromParent$]="subject$"
+    (throughOutputEvent)="getThroughOutput($event)"
+    (throughObservableEvent)="getThroughObservable($event)"
+    >
+    </app-child>
 </div>
