@@ -10,6 +10,7 @@ const arrCities = [
     {city: 'Jaén', country: 'Spain', capital: false}
     ];
 
+
 const arrNonCapitalCities = arrCities.filter(elem => elem.country==="Spain" && elem.capital===false);
 
 console.log(arrNonCapitalCities);    

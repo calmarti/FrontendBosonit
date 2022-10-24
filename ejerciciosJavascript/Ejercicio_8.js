@@ -21,31 +21,31 @@ function fromBytesToFormattedSizeUnits(bytes, n = 3) {
     switch (true) {
 
         case (Math.abs(bytes) >= 0 && Math.abs(bytes) < 1000):
-            return `${Number((bytes).toPrecision(n))}B`;
+            return `${bytes.toPrecision(n)}B`;
 
         case (Math.abs(bytes) >= 1000 && Math.abs(bytes) < (1000 ** 2)):
-            return `${Number(((bytes / 1000)).toPrecision(n))}KB`;
+            return `${(bytes / 1000).toPrecision(n)}KB`;
 
         case (Math.abs(bytes) >= (1000 ** 2) && Math.abs(bytes) < (1000 ** 3)):
-            return `${Number((bytes / 1000 ** 2).toPrecision(n))}MB`;
+            return `${(bytes / 1000 ** 2).toPrecision(n)}MB`;
 
         case (Math.abs(bytes) >= (1000 ** 3) && Math.abs(bytes) < (1000 ** 4)):
-            return `${Number((bytes / 1000 ** 3).toPrecision(n))}GB`;
+            return `${(bytes / 1000 ** 3).toPrecision(n)}GB`;
 
         case (Math.abs(bytes) >= (1000 ** 4) && Math.abs(bytes) < (1000 ** 5)):
-            return `${Number((bytes / 1000 ** 4).toPrecision(n))}TB`;
+            return `${((bytes / 1000 ** 4).toPrecision(n))}TB`;
 
         case (bytes >= (1000 ** 5) && bytes < (1000 ** 6)):
-            return `${Number((bytes / 1000 ** 5).toPrecision(n))}PB`;
+            return `${(bytes / 1000 ** 5).toPrecision(n)}PB`;
 
         case (bytes >= (1000 ** 6) && bytes < (1000 ** 7)):
-            return `${Number((bytes / 1000 ** 6).toPrecision(n))}EB`;
+            return `${(bytes / 1000 ** 6).toPrecision(n)}EB`;
 
         case (bytes >= (1000 ** 7) && bytes < (1000 ** 8)):
-            return `${Number((bytes / 1000 ** 7).toPrecision(n))}ZB`;
+            return `${(bytes / 1000 ** 7).toPrecision(n)}ZB`;
 
         case (bytes >= (1000 ** 8) && bytes < (1000 ** 9)):
-            return `${Number((bytes / 1000 ** 8).toPrecision(n))}YB`;
+            return `${(bytes / 1000 ** 8).toPrecision(n)}YB`;
 
         default:
             return 'The number is too large';
@@ -57,6 +57,7 @@ function fromBytesToFormattedSizeUnits(bytes, n = 3) {
 console.log(fromBytesToFormattedSizeUnits(1000));
 console.log(fromBytesToFormattedSizeUnits(123456789));
 console.log(fromBytesToFormattedSizeUnits(-12145489451.5932, 5));
+
 
 
 //tests

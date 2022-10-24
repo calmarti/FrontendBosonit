@@ -10,20 +10,28 @@
 // console.log(result); // {a: 1, c: 3}
 
 
+
 const func = x => Boolean(x);
 
 function returnFalsyValues(obj, func) {
-    for (let key in obj) {
-        if (func(obj[key]) === true) {
-            delete obj[key];
+    Object.keys(obj).forEach(key=> {
+        if (func(obj[key])){
+            delete obj[key]
         }
-    }
+    })
     return obj;
 }
+    //otra forma de iterar: con 'for in':
+    // for (let key in obj) {
+    //     if (func(obj[key]) === true) {
+    //         delete obj[key];
+    //     }
+    // }
 
 
 //ejemplo:
 console.log(returnFalsyValues({ a:NaN, b:'0', c:0, d:undefined, e:null, f:'false', g:"", h:42, i:false}, func));
+
 
 
 

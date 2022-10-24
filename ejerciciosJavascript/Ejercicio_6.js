@@ -19,4 +19,4 @@ function roundToN(floatNum, n){
 
 //ejemplos del enunciado
 console.log(roundToN(2.123, 2)); 
-console.log(roundToN(1.123456789,6));
+console.log(roundToN(1.1234567,6));

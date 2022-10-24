@@ -10,11 +10,12 @@ const arrCities2 = [
     {city: 'Florence', country: 'Italy', capital: true},
     {city: 'Oslo', country: 'Norway', capital: true},
     {city: 'Jaén', country: 'Spain', capital: false}
-]
+];
+
 
 const newArrNonCapitalCities = arrCities2
 .filter(elem => elem.capital===false)
-.map(elem => ({ city: elem.city, isSpain: elem.country === 'Spain' ? true : false }))
+.map(elem => ({ city: elem.city, isSpain: elem.country === 'Spain'}))
 
 
 console.log(newArrNonCapitalCities);

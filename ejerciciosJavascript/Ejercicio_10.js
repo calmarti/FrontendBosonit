@@ -8,7 +8,7 @@
 
 function removeHTMLTags(str){
     const regex = /(<\w*>|<\/\w+>)/g
-    return str.replaceAll(regex," ").trim().split("  ").join(" ");
+    return str.replaceAll(regex," ").trim().split("  ").join(" ")
 }
 
 

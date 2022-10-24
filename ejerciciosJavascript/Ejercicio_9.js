@@ -7,14 +7,12 @@
 // console.log(myObjLowercase); // { name: 'Charles', address: 'Home Street' }
 
 
-function toLowercaseKeys(obj) {
-    newObj = {};
-    const props = Object.keys(obj)
-    props.forEach(prop => {
-        newObj[prop.toLowerCase()] = obj[prop];
-    })
-    
-    return newObj;
+//TODO: simplificar con Object.keys() u Object.entries()
+
+const toLowercaseKeys = (obj)=>{
+    const newObj={}
+    Object.keys(obj).forEach(key=>newObj[key.toLowerCase()] = obj[key])
+    return newObj
 }
 
 
